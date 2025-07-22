@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>homepage</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'cakes/style.css' %}">
+</head>
+<body>
+     <h1> welcome to CakeFenjooni </h1>
+     <p> This is home page</p>
+     <a href="{% url 'about' %}"> about us </a> |
+     <a href="{% url 'contact' %}"> contact us </a> |
+     <a href="{% url 'products' %}"> our products </a>
+</body>
+</html>

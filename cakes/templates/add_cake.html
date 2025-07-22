@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add a new cake</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'cakes/style.css' %}">
+</head>
+<body>
+      <h1> add a new cake</h1>
+      <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit"> submit </button>
+      </form>
+</body>
+</html>

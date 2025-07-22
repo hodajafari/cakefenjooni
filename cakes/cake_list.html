@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> list of </title>
+</head>
+<body>
+    <h1> kind of cakes </h1>
+    <u1>
+        {% for cake in cakes %}
+            <li>
+                <strong> {{ cake.name}} </strong> - {{ cake.price}} $ <b>
+                {{ cake.description}}</b>
+            </li>
+        {%empty%}
+        <li> felan cake mojood nist </li>
+        {% endfor %}
+    </u1>
+</body>
+</html>

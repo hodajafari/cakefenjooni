@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Products</title>
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'cakes/style.css' %}">
+</head>
+<body>
+    <h1>list of cakes </h1>
+
+    <a href="{% url 'add_cake' %}"> <strong> + </strong> add a new cake</a> |
+    <a href="{% url 'home' %}">back to home</a>
+
+    <ul>
+      {% for cake in cakes %}
+        <li>
+          <strong>{{ cake.name }}</strong> - {{ cake.price }} €<br>
+          {{ cake.description }}<br>
+          {% if cake.is_available %}
+            <em>available</em>
+          {% else %}
+            <em>unavailable</em>
+          {% endif %}
+        </li>
+      {% empty %}
+        <li>nothing is here</li>
+      {% endfor %}
+    </ul>
+</body>
+</html>
